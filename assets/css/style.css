@@ -1,0 +1,11 @@
+.add-button-wrapper {
+    float: right;
+}
+
+.add-button {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.no-exercise-message {
+    color: black;
+}
