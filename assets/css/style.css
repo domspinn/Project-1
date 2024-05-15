@@ -9,3 +9,6 @@
 .no-exercise-message {
     color: black;
 }
+
+p {
+    text-shadow: 3px 3px 4px black;}
