@@ -138,6 +138,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (document.getElementById('selectedExercises')) {
         displaySelectedExercises();
     }
+    if (document.getElementById('back-button')) {
+        document.getElementById('back-button').addEventListener('click', backButton);
+    }
 });
 
 
@@ -212,4 +215,9 @@ function showNutrition(nutrition) {
         });
         nutritionDiv.appendChild(nutritionList);
     }
+}
+
+
+function backButton() {
+  window.location.href = 'index.html';
 }
