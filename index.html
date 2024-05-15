@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+</head>
+<body>
+    <section class="hero is-small is-link has-text-centered">
+        <div class="hero-body">
+          <p class="title is-size-1">Liftify</p>
+        </div>
+    </section>
+
+    <section class="section"></section>
+
+    <div class="columns is-centered">
+        <div class="column is-two-thirds">
+            <section class="section is-small has-text-centered">
+                <h1 class="title">Hello Lifter!</h1>
+                <h2 class="subtitle">
+                    In the below section, you can find your perfect workout routines and log them to your own site. 
+                    You can also track the nutrition of the food you eat!
+                </h2>
+            </section>
+        </div>
+    </div>
+    <div class="columns is-centered">
+        <div class="column is-two-thirds">
+            <div class="box has-background-text">
+                <div class="buttons">
+                    <div id="muscle-button" class="button is-inverted is-large is-fullwidth has-background-danger">Find Workouts</div>
+                    <input id="muscle" class="input is-danger" type="text" placeholder="Search"/>
+                </div>
+                <div id="exercises" class="has-text-black"></div>
+            </div>
+        </div>
+    </div>
+    <div class="columns is-centered">
+        <div class="column is-two-thirds">
+            <div class="box has-background-text">
+                <div class="buttons">
+                    <div class="button is-inverted is-large is-fullwidth has-background-warning" id="viewWorkoutsBtn">View Your Workouts</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns is-centered">
+        <div class="column is-two-thirds">
+            <div class="box has-background-text">
+                <div class="buttons">
+                    <div id="nutritionSearch-button" class="button is-inverted is-large is-fullwidth has-background-success">Nutrition Tracker</div>
+                    <input id="nutritionSearch" class="input is-success" type="text" placeholder="Search"/>
+                </div>
+                <div id="nutrition" class="has-text-black"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section"></section>
+
+    <script src="assets/js/style.js"></script>
+</body>
+</html>
