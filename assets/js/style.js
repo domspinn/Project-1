@@ -35,10 +35,11 @@ function showExercises(exercises) {
         exercises.forEach(item => {
             const exerciseItem = document.createElement('li');
             exerciseItem.textContent = item.name;
+            exerciseItem.classList.add('title', 'has-text-black', 'is-size-6')
 
             const addButton = document.createElement('button');
             addButton.textContent = "Add";
-            addButton.classList.add('add-button')
+            addButton.classList.add('button', 'is-ghost', 'p-0')
             addButton.addEventListener('click', function() {
                 addExercise(item.name);
                 alert('Added!')
@@ -118,7 +119,7 @@ function displaySelectedExercises() {
         });
         exercisesDiv.appendChild(exerciseList);
     } else {
-        const noExercisesMessage = document.createElement('p');
+        const noExercisesMessage = document.createElement('h1');
         noExercisesMessage.classList.add('title', 'has-text-black', 'is-size-4')
         noExercisesMessage.textContent = 'No exercises selected!';
         exercisesDiv.appendChild(noExercisesMessage);
@@ -140,6 +141,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if (document.getElementById('back-button')) {
         document.getElementById('back-button').addEventListener('click', backButton);
+    }
+    if (document.getElementById('clear-button')) {
+        document.getElementById('clear-button').addEventListener('click', clearButton);
     }
 });
 
@@ -197,7 +201,9 @@ function showNutrition(nutrition) {
     } else {
         nutrition.forEach(item => {
             const nutritionItemName = document.createElement('li');
+            nutritionItemName.classList.add('title', 'has-text-black', 'is-size-5');
             const nutritionItemCalories = document.createElement('li');
+            nutritionItemCalories.classList.add('title', 'has-text-black', 'is-size-5');
 
             function capitalizeFirstLetter(string) {
                 return string.charAt(0).toUpperCase() + string.slice(1);
@@ -220,4 +226,9 @@ function showNutrition(nutrition) {
 
 function backButton() {
   window.location.href = 'index.html';
+}
+
+function clearButton() {
+    localStorage.clear();
+    location.reload();
 }
